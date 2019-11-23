@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "me.instagram.robot"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1124
+        versionName "2.1.1.190508"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFile 'proguard-gson.pro'
+            proguardFile 'proguard-rx-java.pro'
+            proguardFile 'proguard-rx-android.pro'
+            proguardFile 'proguard-rxjava-promises.pro'
+            proguardFile 'proguard-square-okio.pro'
+            proguardFile 'proguard-square-okhttp3.pro'
+            proguardFile 'proguard-square-retrofit2.pro'
+            proguardFile 'proguard-support-design.pro'
+            proguardFile 'proguard-support-v7-appcompat.pro'
+            proguardFile 'proguard-support-v7-cardview.pro'
+            proguardFile 'proguard-android-gif-drawable.pro'
+            proguardFile 'proguard-androidannotations.pro'
+            proguardFile 'proguard-retrolambda.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFile 'proguard-gson.pro'
+//            proguardFile 'proguard-rx-java.pro'
+//            proguardFile 'proguard-rx-android.pro'
+//            proguardFile 'proguard-rxjava-promises.pro'
+//            proguardFile 'proguard-square-okio.pro'
+//            proguardFile 'proguard-square-okhttp3.pro'
+//            proguardFile 'proguard-square-retrofit2.pro'
+//            proguardFile 'proguard-support-design.pro'
+//            proguardFile 'proguard-support-v7-appcompat.pro'
+//            proguardFile 'proguard-support-v7-cardview.pro'
+//            proguardFile 'proguard-android-gif-drawable.pro'
+//            proguardFile 'proguard-androidannotations.pro'
+//            proguardFile 'proguard-retrolambda.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    provided fileTree(dir: 'libs', include: ['*.jar'])
+//    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.orhanobut:hawk:2.0.1'
+
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.birbit:android-priority-jobqueue:2.0.1'
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
+}
