@@ -1,6 +1,7 @@
 #Instagram Xposed小插件
 
 Prevent Instagram go back to Top on resume event
+
 每次回到IG，界面都会刷新，本插件阻止了该动作，刷屏更愉快
 
 #Usage
